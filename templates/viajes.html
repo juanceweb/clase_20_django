@@ -1,0 +1,18 @@
+{% extends "padre.html" %}
+
+{% block Content %}
+<div class="container-fluid">
+  <div class="card-group">
+{% for viaje in viajes%}
+
+    <div class="card m-2" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{viaje.nombre}}</h5>
+        <p class="card-text">{{viaje.destino}}</p>
+        <a href="#" class="btn btn-primary">{{viaje.precio}}</a>
+      </div>
+    </div>
+{% endfor %}
+  </div>
+</div>
+{% endblock %}
